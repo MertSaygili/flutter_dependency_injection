@@ -4,7 +4,7 @@ import 'package:flutter_dependcy_injection/feature/constants.dart';
 import 'package:flutter_dependcy_injection/feature/injection.dart';
 
 void main() {
-  Init().initGetIt();
+  Init().initInstances();
   runApp(const MyApp());
 }
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -48,13 +48,13 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(Init().getItInstance.get<Constants>().appName),
+        title: Text(getIt.get<Constants>().appName),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(Init().getItInstance.get<Api>().sendSomething()),
+            Text(getIt.get<Api>().sendSomething()),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,

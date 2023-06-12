@@ -2,16 +2,14 @@ import 'package:flutter_dependcy_injection/feature/api.dart';
 import 'package:flutter_dependcy_injection/feature/constants.dart';
 import 'package:get_it/get_it.dart';
 
-class Init {
-  final GetIt _getIt = GetIt.instance;
+final GetIt getIt = GetIt.instance;
 
-  void initGetIt() {
+class Init {
+  void initInstances() {
     // API
-    _getIt.registerLazySingleton<Api>(() => Api());
+    getIt.registerLazySingleton<Api>(() => Api());
 
     // Constants
-    _getIt.registerLazySingleton<Constants>(() => const Constants());
+    getIt.registerLazySingleton<Constants>(() => const Constants());
   }
-
-  GetIt get getItInstance => _getIt;
 }
