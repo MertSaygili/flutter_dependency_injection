@@ -6,6 +6,8 @@ final GetIt getIt = GetIt.instance;
 
 class Init {
   void initInstances() {
+    getIt();
+
     // API
     getIt.registerLazySingleton<Api>(() => Api());
 
