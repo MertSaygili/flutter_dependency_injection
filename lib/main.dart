@@ -4,7 +4,7 @@ import 'package:flutter_dependcy_injection/feature/constants.dart';
 import 'package:flutter_dependcy_injection/feature/injection.dart';
 
 void main() {
-  Init().initInstances();
+  Injection().initInstances();
   runApp(const MyApp());
 }
 
@@ -46,15 +46,12 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(getIt.get<Constants>().appName),
-      ),
+      appBar: AppBar(backgroundColor: Theme.of(context).colorScheme.inversePrimary, title: Text(Injection.getIt.get<Constants>().appName)),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(getIt.get<Api>().sendSomething()),
+            Text(Injection.getIt.get<Api>().sendSomething()),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
