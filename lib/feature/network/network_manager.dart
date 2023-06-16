@@ -5,6 +5,10 @@ import 'package:flutter_dependcy_injection/feature/injection.dart';
 
 import '../constants/constants.dart';
 
+// network layout for app is here (dio, interceptors, etc.)
+// singleton class
+
+// update network manager to use dio and interceptors (if needed)
 class NetworkManager {
   late final Dio dio;
 
