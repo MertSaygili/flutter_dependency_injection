@@ -1,17 +1,16 @@
-import 'package:flutter_dependcy_injection/feature/api.dart';
-import 'package:flutter_dependcy_injection/feature/constants.dart';
-import 'package:flutter_dependcy_injection/feature/log/log_manager.dart';
 import 'package:get_it/get_it.dart';
 
+import 'constants/constants.dart';
+import 'log/log_manager.dart';
+import 'network/network_manager.dart';
+
 class Injection {
-  static final GetIt _getIt = GetIt.instance;
+  static final GetIt getIt = GetIt.instance;
 
   void initInstances() {
     getIt
-      ..registerSingleton<Api>(Api())
       ..registerSingleton<Constants>(const Constants())
-      ..registerSingleton<LogManager>(LogManager());
+      ..registerSingleton<LogManager>(LogManager())
+      ..registerSingleton<NetworkManager>(NetworkManager());
   }
-
-  static GetIt get getIt => _getIt;
 }

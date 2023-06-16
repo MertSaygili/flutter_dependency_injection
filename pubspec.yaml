@@ -19,9 +19,14 @@ dependencies:
 
   # network 
   dio: ^5.2.1+1
+  json_serializable: ^6.7.0
+  json_annotation: ^4.8.1
 
   # logger
   logger: ^1.4.0
+
+  #equatable
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:
