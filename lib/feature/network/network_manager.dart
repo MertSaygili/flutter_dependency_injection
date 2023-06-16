@@ -5,6 +5,7 @@ import 'package:flutter_dependcy_injection/feature/injection.dart';
 
 import '../constants/constants.dart';
 
+// network layout for app is here (dio, interceptors, etc.)
 class NetworkManager {
   late final Dio dio;
 
