@@ -28,6 +28,14 @@ dependencies:
   #equatable
   equatable: ^2.0.5
 
+  # provider
+  provider: ^6.0.5
+
+  # router -- route management
+  auto_route: ^5.0.4
+
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -36,7 +44,13 @@ dev_dependencies:
   
   # dependency injection
   injectable_generator: ^2.1.6
+  
+  # auto route generator
+  auto_route_generator: ^5.0.3
+
+  # building generated code
   build_runner: ^2.4.5
+
 
 flutter:
   uses-material-design: true

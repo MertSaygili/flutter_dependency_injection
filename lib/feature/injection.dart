@@ -9,6 +9,7 @@ class Injection {
 
   void initInstances() {
     getIt
+      // lazy call ..registerLazySingleton<Constants>(() => const Constants())
       ..registerSingleton<Constants>(const Constants())
       ..registerSingleton<LogManager>(LogManager())
       ..registerSingleton<NetworkManager>(NetworkManager());
