@@ -25,6 +25,9 @@ dependencies:
   # logger
   logger: ^1.4.0
 
+  # dartZ
+  dartz: ^0.10.1
+
   #equatable
   equatable: ^2.0.5
 
